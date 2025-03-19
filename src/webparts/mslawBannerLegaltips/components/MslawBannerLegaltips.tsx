@@ -171,8 +171,8 @@ export default class MslawBannerLegaltips extends React.Component<
                   ) : error ? (
                     <div>{error}</div>
                   ) : (
-                    <h2
-                      className={styles.heroText}
+                    <div
+                      className={styles.heroTitle}
                       dangerouslySetInnerHTML={this._createMarkup(textContent)}
                     />
                   )}

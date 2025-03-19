@@ -125,10 +125,19 @@ $peacock-width-mobile: 245px;
   line-height: 2.0;
 }
 
+.heroTitle {
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 10;
+}
+
 // Hero Text
 .heroText {
   font-size: 50px;
   position: relative;
+  padding: 0;
   z-index: 10;
 
   p {

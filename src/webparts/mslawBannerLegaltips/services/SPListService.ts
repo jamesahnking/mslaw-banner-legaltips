@@ -94,7 +94,7 @@ export class SPService {
 
       return {
         Id: item.ID,
-        Text: item.Title,
+        Text: item.Title || "",
         ResourceLink: item.ResourceLink || "",
         HeaderContent: item.HeaderContent || "",
         BodyContent: item.BodyContent || "",
