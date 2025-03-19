@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "mslaw-banner-legaltips-client-side-solution",
+    "id": "7e4beecf-bdf2-49d0-94f9-dc5673833b11",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.20.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "mslaw-banner-legaltips description"
+      },
+      "longDescription": {
+        "default": "mslaw-banner-legaltips description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "mslaw-banner-legaltips Feature",
+        "description": "The feature that activates elements of the mslaw-banner-legaltips solution.",
+        "id": "3fe33566-4b0c-460f-aa1e-42a71897c509",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/mslaw-banner-legaltips.sppkg"
+  }
+}

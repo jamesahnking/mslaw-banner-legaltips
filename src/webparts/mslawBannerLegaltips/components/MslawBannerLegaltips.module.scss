@@ -1,0 +1,202 @@
+// Global styles
+:global {
+  #workbenchPageContent,
+  .CanvasComponent.LCS .CanvasZone {
+    max-width: 100% !important;
+  }
+}
+
+// Variables
+$rule-color: rgba(80, 106, 130, 1); // Back to RGBA!
+$text-color: #ffffff;
+$font-family: "Aptos", "Helvetica Neue", sans-serif;
+$hero-padding-desktop: 150px 250px;
+$hero-padding-mobile: 80px;
+$rule-distance: 30px;
+$peacock-width-desktop: 490px;
+$peacock-width-mobile: 245px;
+
+
+// Hero Banner
+.heroBanner {
+  font-family: $font-family;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(circle at 30% center, rgba(13, 39, 70, 0.5) 0%, rgba(0, 21, 45, 0) 50%),
+    linear-gradient(90deg, #0D2746 0%, #005497 70%, #001B31 100%);
+  background-image: url('../assets/legalTipsBg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: $text-color;
+  padding: $hero-padding-desktop;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -5px;
+    bottom: -40px;
+    pointer-events: none;
+    z-index: 1;
+    width: $peacock-width-desktop;
+    background-image: url('../assets/cropped-peacock3.svg');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: $peacock-width-desktop auto;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -70px;
+    right: -5px;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    z-index: 0;
+  }
+}
+
+// Decorative Rules
+.topRule {
+  border-top: 1px solid #4D657B !important;
+  position: absolute;
+  top: $rule-distance;
+  left: $rule-distance;
+  right: $rule-distance;
+  z-index: 10;
+}
+
+.rightRule {
+  border-left: 1px solid #4D657B !important;
+  position: absolute;
+  top: $rule-distance;
+  right: $rule-distance;
+  bottom: $rule-distance;
+  height: calc(100% - 215px - #{$rule-distance * 2}); // Ensure consistent height
+  z-index: 12;
+}
+
+.leftRule {
+  border-left: 1px solid #4D657B !important;
+  position: absolute;
+  top: $rule-distance;
+  left: $rule-distance;
+  bottom: $rule-distance;
+  height: calc(100% - #{$rule-distance * 2});
+  z-index: 12;
+}
+
+.bottomRule {
+  border-top: 1px solid #4D657B !important;
+  position: absolute;
+  right: $peacock-width-desktop + 20px;
+  width: calc(100% - #{$peacock-width-desktop + 20px} - #{$rule-distance});
+  bottom: $rule-distance;
+  z-index: 10;
+}
+
+// New flex container for horizontal columns layout
+.columnsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.bodyContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 20px;
+}
+
+.bodyText {
+  margin-bottom: 30px;
+  font-size: 16px;
+  color: $text-color;
+  line-height: 2.0;
+}
+
+// Hero Text
+.heroText {
+  font-size: 50px;
+  position: relative;
+  z-index: 10;
+
+  p {
+    margin: 0;
+  }
+}
+
+.columnLeft {
+  width: 48%; // Slightly less than 50% to account for any margin/padding
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}  
+
+.columnRight {
+  width: 48%; // Slightly less than 50% to account for any margin/padding
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.headerContainer {
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+.header {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: $text-color;
+  line-height: 1.2;
+}
+
+// Responsive Design
+@media (max-width: 992px) {
+  .heroBanner {
+    font-size: 21px;
+    padding: $hero-padding-mobile;
+
+    &::after {
+      background-size: $peacock-width-mobile auto;
+      width: $peacock-width-mobile;
+    }
+  }
+
+  .heroText {
+    font-size: 21px;
+  }
+
+  .rightRule {
+    height: calc(100% - 115px - #{$rule-distance * 2});
+    right: $rule-distance;
+  }
+
+  .bottomRule {
+    right: $peacock-width-mobile + 5px;
+    width: calc(100% - #{$peacock-width-mobile + 5px} - #{$rule-distance});
+  }
+  
+  // For mobile screens, stack the columns vertically
+  .columnsContainer {
+    flex-direction: column;
+  }
+  
+  .columnLeft, 
+  .columnRight {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

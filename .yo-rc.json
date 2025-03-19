@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.20.4",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.20.0",
+    "libraryName": "mslaw-banner-legaltips",
+    "libraryId": "7e4beecf-bdf2-49d0-94f9-dc5673833b11",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "mslaw-banner-legaltips",
+    "solutionShortDescription": "mslaw-banner-legaltips description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
