@@ -6,6 +6,7 @@ import { IResourceItem } from "../models/IResourceItem";
 interface ISPListItem {
   ID: number;
   Title: string;
+  Text: string;
   ResourceLink?: string;
   HeaderContent?: string;
   BodyContent?: string;
@@ -53,7 +54,8 @@ export class SPService {
 
       return data.value.map((item: ISPListItem) => ({
         Id: item.ID,
-        Text: item.Title,
+        Title: item.Title || "", // Ensure Title is not undefined
+        Text: item.Text || "", // Ensure Text is not undefined
         ResourceLink: item.ResourceLink || "",
         HeaderContent: item.HeaderContent || "",
         BodyContent: item.BodyContent || "",
@@ -94,7 +96,8 @@ export class SPService {
 
       return {
         Id: item.ID,
-        Text: item.Title || "",
+        Title: item.Title || "", // Ensure Title is not undefined
+        Text: item.Text || "",
         ResourceLink: item.ResourceLink || "",
         HeaderContent: item.HeaderContent || "",
         BodyContent: item.BodyContent || "",

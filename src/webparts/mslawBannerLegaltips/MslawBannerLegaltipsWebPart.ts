@@ -188,7 +188,7 @@ export default class MslawBannerLegaltipsWebPart extends BaseClientSideWebPart<I
         // Map items to dropdown options
         this._contentItemsOptions = items.map((item) => ({
           key: item.Id,
-          text: item.Text || "No Title",
+          text: item.Title || "No Title",
         }));
   
         // Add a "None" option
